@@ -1,0 +1,202 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #56ccf2;
+  background: -webkit-linear-gradient(to right, #2f80ed, #56ccf2);
+  background: linear-gradient(to right, #2f80ed, #56ccf2);
+  height: 100vh;
+  width: 100vw;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+overflow: hidden;
+}
+
+form {
+  background: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.35)
+  );
+  max-width: 400px;
+  padding: 36px;
+  border-radius: 24px;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.46);
+  backdrop-filter: blur(15px);
+  max-height: 100%;
+  overflow-y: auto;
+overflow-x: hidden;
+}
+
+button {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+input,
+button {
+  background: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 0.65),
+    rgba(255, 255, 255, 0.25)
+  );
+  border: none;
+  border-radius: 18px;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.46);
+  color: rgb(255, 255, 255);
+  padding: 12px 24px;
+  margin: 24px;
+  font-size: 24px;
+  transition: box-shadow 0.2s, outline 0.3s;
+
+}
+
+label {
+  color: rgb(255, 255, 255);
+  position: absolute;
+  left: 40px;
+  top: 38%;
+  opacity: 1;
+  font-family: italic;
+  transition: 0.5s; /*animacja*/
+  font-style: italic;
+}
+
+input {
+  width: 300px;
+  cursor: text;
+}
+
+.form_input-cointainer {
+  position: relative;
+}
+
+input:focus + label,
+input:not(:placeholder-shown) + label {
+  left: 300px;
+  opacity: 0;
+}
+
+input:hover,
+button:hover {
+  box-shadow: 0px 8px 12px 0px;
+}
+
+input:focus,
+input:focus {
+  outline: solid 3px rgba(255, 255, 255, 0.8);
+}
+
+button:after {
+  content: " ";
+  display: block;
+  background: rgba(255, 255, 255, 0.5);
+  height: 130px;
+  position: absolute;
+  width: 50px;
+  left: -70px;
+  transition: 0.15s; linear;
+  top: -30px;
+  transform: skewX(-15deg);
+}
+
+button:hover:after {
+  left: 110%;
+}
+
+.form__spacer {
+  background: rgba(255, 255, 255, 0.55);
+  height: 4px;
+  margin: 0 auto 32px;
+  width: 80%;
+border-radius: 100%;
+}
+.form__icon {
+border: solid 3px rgba(255, 255, 255, 0.6);
+border-radius: 50%;
+height: 72px;
+width: 72px;
+box-shadow: 0px 8px 24px 0 rgba(0, 0, 0, 0.3);
+margin: 0 auto 24px;
+position: relative;
+overflow: hidden;
+}
+
+.form__icon:before {
+  background:rgba(255, 255, 255, 0.6);
+  content: " ";
+  height: 24px;
+  width: 64px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  border-radius: 50%;
+}
+
+.form__icon:after {
+  background:rgba(255, 255, 255, 0.6);
+  content: " ";
+  height: 30px;
+  width: 30px;
+  display: block;
+  left: 50%;
+  position: absolute;
+  bottom: 45%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+}
+
+.bg {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.bg__dot {
+  background: #a8c0ff; 
+  background: -webkit-linear-gradient(to right, #3f2b96, #a8c0ff);  
+  background: linear-gradient(to right, #3f2b96, #a8c0ff); 
+  height: 10vh;
+  width: 10vh;
+  border-radius: 50%;
+} 
+
+.bg__dot:nth-child(1) {
+  height: 50vh;
+  width: 50vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation: move1 15s infinite;
+}
+
+.bg__dot:nth-child(2) {
+  height: 30vh;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+width: 30vh;
+animation: move2 10s infinite;
+}
+
+@keyframes move1 {
+  from {transform: translateY(-70vh);
+  }
+  to {transform: translateY(100vh);
+  }
+}
+
+@keyframes move2 {
+  from {transform: translateY(60vh);
+  }
+  to {transform: translateY(-100vh);
+  }

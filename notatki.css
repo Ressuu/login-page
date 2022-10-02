@@ -1,0 +1,6 @@
+Pozycjonowanie:
+
+pozycjonowanie na srodek:
+display: flex; - dodanie objektowi wartosc flex.
+justify-content: center - przemieszczenie objektu w lini poziomej na srodek.
+alaign-items: center - przeniesienie objektu w lini pionowej na stronek.
