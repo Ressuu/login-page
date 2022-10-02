@@ -15,7 +15,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-overflow: hidden;
+  overflow: hidden;
 }
 
 form {
@@ -31,13 +31,15 @@ form {
   backdrop-filter: blur(15px);
   max-height: 100%;
   overflow-y: auto;
-overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 button {
   cursor: pointer;
   position: relative;
   overflow: hidden;
+ 
+ 
 }
 
 input,
@@ -184,8 +186,8 @@ overflow: hidden;
   left: 50%;
   position: absolute;
   top: 50%;
-width: 30vh;
-animation: move2 10s infinite;
+  width: 30vh;
+  animation: move2 10s infinite;
 }
 
 @keyframes move1 {
